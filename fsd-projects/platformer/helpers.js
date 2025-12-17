@@ -1,5 +1,7 @@
 ///// DO NOT CHANGE ANYTHING IN THIS FILE /////
 
+const { jsx } = require("react/jsx-runtime");
+
 ///////////////////////////////////////////////
 // Core functionality /////////////////////////
 ///////////////////////////////////////////////
@@ -701,8 +703,32 @@ function winGame() {
     window.location.reload();
   }
 }
+js
 
-function createPlatform(
+//////// ONLY CHANGE BELOW THIS POINT ////////
+js 
+// TODO 1 - platforms 
+createPlatform(500,650,100,90);
+createPlatform(650,620,50,120);
+createPlatform(100,500,200,20);
+createPlatform(350,420,150,20);
+createPlatform(950,650,50,150);
+
+// TODO 2 - collectables
+createCollectable("database",100,200,10,0.8);
+createCollectable("max", 150,250,8,0.6);
+createCollectable("diamond",200,300,6,0.5);
+createCollectable("max",450,250,8,0.6);
+createCollectable("grace",175,275,6,0.3);
+
+//Todo 3 - cannons 
+createCannon("left",300,1200);
+createCannon("right",450,1300);
+createCannon("top",600,2200);
+createCannon("top",500,2000);
+createCannon("top",1000,2500);
+
+//////// ONLY CHANGE ABOVE THIS POINT////////
   x,
   y,
   width,
