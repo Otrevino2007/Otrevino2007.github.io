@@ -495,7 +495,8 @@ function drawBadPlatforms() {
   }
 }
 
-function toggleGrid() {
+function toggleGrid() { 
+
   shouldDrawGrid = true;
 }
 
