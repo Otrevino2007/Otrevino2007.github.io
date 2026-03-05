@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -69,10 +69,9 @@
         //////////////////////////////////////////////////////////////////
 
         // TODO 2 - Variable declarations
-
-
-
-
+        var positionX = 0;
+        var points = 0;
+        var speed = 10;
 
         /**
          * This Function will be called 20 times/second.
@@ -80,10 +79,22 @@
          * If the box drifts off the screen, turn it around!
          */
         function update() {
+          // TODO 1 - Move the box to the right side
+          // TODO 2 - Increment positionX by speed
+          positionX += speed;
 
-        
+          // TODO 2 - Call moveBoxTo with positionX
+          moveBoxTo(positionX);
 
-          
+          // TODO 6 - Bounce off the right side
+          if (positionX > boardWidth) {
+            speed *= -1;
+          }
+
+          // TODO 7 - Bounce off the left side
+          if (positionX < 0) {
+            speed *= -1;
+          }
         }
 
         /**
@@ -94,14 +105,19 @@
          * - move the box to the left side of the screen.
          */
         function handleBoxClick() {
+          // TODO 3 - Reset positionX to 0
+          positionX = 0;
 
+          // TODO 4 - Increase points by 1
+          points++;
 
+          // TODO 4 - Display points on the box
+          changeBoxText(points);
 
-
+          // TODO 8 - Use formula to calculate speed based on points
+          // speed = 3 * points + 10
+          speed = 3 * points + 10;
         }
-
-
-        
       })();
     </script>
   </body>
