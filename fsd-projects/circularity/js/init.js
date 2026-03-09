@@ -15,9 +15,11 @@ var init = function (window) {
     // PROGRAM SETUP //
     ///////////////////
 
+
     // TODO 1 : Declare and initialize our variables
-    var circle;
-    var circles = [];
+   window.circle = null;      // variable global para un solo círculo
+   window.circles = [];       // variable global para almacenar todos los círculos
+
 
     // TODO 2 : Create a function that draws a circle
     function drawCircle() {
