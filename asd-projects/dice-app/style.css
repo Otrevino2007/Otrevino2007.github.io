@@ -1,0 +1,14 @@
+body {
+  text-align: top left;
+  font-family: Arial, sans-serif;
+}
+
+#die {
+  height: 100px;
+  width: 100px;
+  background-color: lightgray;
+  position: relative;
+  margin: 50px auto;
+  border-radius: 10px;
+  cursor: pointer;
+}
